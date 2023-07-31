@@ -332,6 +332,8 @@
 -r:"D:/Documents/Personal Games/OgresVisitedTown-Unity/OgresVisitedTown/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.Unsafe.dll"
 -r:"D:/Documents/Personal Games/OgresVisitedTown-Unity/OgresVisitedTown/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Documents/Personal Games/OgresVisitedTown-Unity/OgresVisitedTown/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PPv2URPConverters.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
