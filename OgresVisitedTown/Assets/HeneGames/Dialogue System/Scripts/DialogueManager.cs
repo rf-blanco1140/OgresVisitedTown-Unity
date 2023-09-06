@@ -12,6 +12,13 @@ namespace HeneGames.DialogueSystem
         private bool dialogueIsOn;
         private DialogueTrigger dialogueTrigger;
 
+        //------Extended Variables
+        private string[] currentSections;
+        private int currentSectionID=0;
+        private int maxSectionsInSentence=0;
+        private bool isSentenceFinished=false;
+        //------------------------
+
         public enum TriggerState
         {
             Collision,
@@ -179,7 +186,8 @@ namespace HeneGames.DialogueSystem
             startDialogueEvent.Invoke();
 
             //Reset sentence index
-            currentSentence = 0;
+            //currentSentence = 0; DONE--> this is the behavior we dont want
+            ProvideCurrentSentence();
 
             //Show first sentence in dialogue UI
             ShowCurrentSentence();
@@ -188,6 +196,7 @@ namespace HeneGames.DialogueSystem
             PlaySound(sentences[currentSentence].sentenceSound);
         }
 
+        //TODO--> Stop showing text when showing the last section of the current sentence and increase the current sentece ID to start from there next interaction
         public void NextSentence(out bool lastSentence)
         {
             //The next sentence cannot be changed immediately after starting
@@ -198,7 +207,8 @@ namespace HeneGames.DialogueSystem
             }
 
             //Add one to sentence index
-            currentSentence++;
+            //currentSentence++;
+            currentSectionID++;
 
             //Next sentence event
             if (dialogueTrigger != null)
@@ -209,11 +219,20 @@ namespace HeneGames.DialogueSystem
             nextSentenceDialogueEvent.Invoke();
 
             //If last sentence stop dialogue and return
-            if (currentSentence > sentences.Count - 1)
+            //if (currentSentence > sentences.Count - 1)
+            //{
+              //  StopDialogue();
+
+                //lastSentence = true;
+
+                //return;
+            //}
+            if (currentSectionID > maxSectionsInSentence) //TODO Revisar mas tarde
             {
                 StopDialogue();
 
                 lastSentence = true;
+                isSentenceFinished = true;
 
                 return;
             }
@@ -267,13 +286,14 @@ namespace HeneGames.DialogueSystem
             //Play sentence sound
             audioSource.PlayOneShot(_audioClip);
         }
-
+        
+        //TODO --> Secuentially show all sections of the current sentence instead of all avaliable sentences
         private void ShowCurrentSentence()
         {
             if (sentences[currentSentence].dialogueCharacter != null)
             {
                 //Show sentence on the screen
-                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, currentSections[currentSectionID]);//sentences[currentSentence].sentence);
 
                 //Invoke sentence event
                 sentences[currentSentence].sentenceEvent.Invoke();
@@ -284,10 +304,51 @@ namespace HeneGames.DialogueSystem
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(_dialogueCharacter, currentSections[currentSectionID]);//sentences[currentSentence].sentence);
             }
         }
+
+
+        //-----------Extended Code
+
+        private void ProvideCurrentSentence()
+        {
+            if(isSentenceFinished)
+            {
+                if(currentSentence<sentences.Count-1)
+                {
+                    currentSentence++;
+                }
+
+                isSentenceFinished = false;
+                currentSectionID = 0;
+            }
+            currentSections = new string[sentences[currentSentence].sectionsCount];
+            DivideSentenceInSections();
+        }
+        private void DivideSentenceInSections()
+        {
+            int sectionID = 0;
+            string _letters = sentences[currentSentence].sentence;
+            foreach (char _letter in _letters)
+            {
+                if(_letter == '+')
+                {
+                    sectionID++;
+                }
+                else
+                {
+                    currentSections[sectionID] += _letter;
+                }
+                
+            }
+            maxSectionsInSentence = sectionID;
+        }
+
     }
+
+   
+
 
     [System.Serializable]
     public class NPC_Centence
@@ -302,5 +363,7 @@ namespace HeneGames.DialogueSystem
         public AudioClip sentenceSound;
 
         public UnityEvent sentenceEvent;
+
+        public int sectionsCount;
     }
 }
