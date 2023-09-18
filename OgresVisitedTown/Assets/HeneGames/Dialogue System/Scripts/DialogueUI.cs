@@ -103,10 +103,16 @@ namespace HeneGames.DialogueSystem
         public void ClearText()
         {
             dialogueWindow.SetActive(false);
+            interactionUI.SetActive(true);
         }
 
         public void ShowInteractionUI(bool _value)
         {
+            if(_value==true && dialogueWindow.active)
+            {
+                Debug.LogError(":D");
+                return;
+            }
             interactionUI.SetActive(_value);
         }
 

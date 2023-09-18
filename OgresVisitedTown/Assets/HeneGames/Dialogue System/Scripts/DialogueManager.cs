@@ -58,7 +58,7 @@ namespace HeneGames.DialogueSystem
 
                 //If component found start dialogue
                 DialogueUI.instance.StartDialogue(this);
-
+                
                 //Hide interaction UI
                 DialogueUI.instance.ShowInteractionUI(false);
 
@@ -105,6 +105,22 @@ namespace HeneGames.DialogueSystem
                     DialogueUI.instance.StartDialogue(this);
                 }
             }
+            //Extended Code
+            if (dialogueTrigger != null)
+                return;
+
+            if (triggerState == TriggerState.Input && dialogueTrigger == null)
+            {
+                //Try to find the "DialogueTrigger" component in the crashing collider
+                if (collision.gameObject.TryGetComponent<DialogueTrigger>(out DialogueTrigger _trigger))
+                {
+                    //Show interaction UI
+                    DialogueUI.instance.ShowInteractionUI(true);
+
+                    //Store refenrece
+                    dialogueTrigger = _trigger;
+                }
+            }
         }
 
         //Start dialogue by pressing DialogueUI action input
@@ -130,7 +146,11 @@ namespace HeneGames.DialogueSystem
         private void OnTriggerStay2D(Collider2D collision)
         {
             if (dialogueTrigger != null)
+            {
+                DialogueUI.instance.ShowInteractionUI(true);
+
                 return;
+            }
 
             if (triggerState == TriggerState.Input && dialogueTrigger == null)
             {
