@@ -10,31 +10,28 @@ public class S_interactionObject : MonoBehaviour
     private string[] currentSentences;
         
     [Header("Dialogue")]
-    [SerializeField] private List<DialogTextContainer> sentences = new List<DialogTextContainer>();
+    [SerializeField] private List<DialogTextContainer> sections = new List<DialogTextContainer>();
 
-    public int GetCurrentDialogSectionID()
+    private void Start()
     {
-        return currentSectionID;
-    }
-    public void IncreasecurrentDialogSectionID()
-    {
-        currentSectionID++;
+        currentSectionID = 0;
+        currentSentenceID = 0;
     }
     public string GetCurrentSentence()
     {
         if(currentSentenceID==0)
         {
-            currentSentences = DiviveSectionInSnetences();
+            currentSentences = DiviveSectionInSentences();
         }
         string currentSentence = currentSentences[currentSentenceID];
         currentSentenceID++;
         return currentSentence;
     }
-    private string[] DiviveSectionInSnetences()
+    private string[] DiviveSectionInSentences()
     {
-        string[] tCurrentSentences = new string[sentences[currentSectionID].totalSentences];
+        string[] tCurrentSentences = new string[sections[currentSectionID].totalSentences];
         int sentenceID = 0;
-        string _letters = sentences[currentSectionID].sectionText;
+        string _letters = sections[currentSectionID].sectionText;
         foreach (char _letter in _letters)
         {
             if (_letter == '+')
@@ -50,18 +47,23 @@ public class S_interactionObject : MonoBehaviour
     }
     public bool IsEndOfSection()
     {
+        Debug.Log("current Section ID: "+currentSectionID);
         bool answer = false;
-        if(currentSentenceID== sentences[currentSectionID].totalSentences)
+        if(currentSentenceID== sections[currentSectionID].totalSentences)
         {
             answer = true;
+            PrepareForNextSection();
         }
         return answer;
     }
 
     public void PrepareForNextSection()
     {
+        if(currentSectionID<sections.Count-1)
+        {
+            currentSectionID++;
+        }
         currentSentenceID = 0;
-        currentSectionID = 0;
     }
 }
 

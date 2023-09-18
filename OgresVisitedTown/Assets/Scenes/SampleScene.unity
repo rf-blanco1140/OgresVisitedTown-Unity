@@ -30090,9 +30090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentences:
-  - sectionText: 
-    totalSentences: 0
+  sections: []
 --- !u!61 &288434086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30164,9 +30162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentences:
-  - sectionText: lol+blablablablablablablablablabblabalablaablabalablabla+a+c+t+v+a
-    totalSentences: 7
+  sections:
+  - sectionText: vea
+    totalSentences: 1
 --- !u!61 &355868830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96898,7 +96896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentences: []
+  sections: []
 --- !u!1 &1274192969
 GameObject:
   m_ObjectHideFlags: 0
