@@ -27271,7 +27271,6 @@ GameObject:
   m_Component:
   - component: {fileID: 148832827}
   - component: {fileID: 148832828}
-  - component: {fileID: 148832829}
   m_Layer: 0
   m_Name: House B
   m_TagString: Untagged
@@ -27320,79 +27319,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &148832829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148832826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "how did you found that old entrance, it\u2019s very rarely used"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "Hmm? You want to talk? How very odd of a person, I guess being isolated
-      from the rest of the country does that to you+\nStill, you should stop+\nI
-      don\u2019t care if they reprimand me for speaking with and stranger, but you
-      might get something worse than being screamed at if you are too nosy"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 3
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "I mean, they told us not to speak with you to be safe but you don\u2019t
-      seem to know a thing! hehehe"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "You still want to talk?! you are a fun one ain\u2019t you!\nWell let
-      me tell you a gossip, we don\u2019t really hate the army so don\u2019t take
-      what the other might say to heart+it\u2019s just that you gotta be careful,
-      I\u2019m sure you understand"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 2
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: Shhh kid, they might start getting suspicious if we talk too much
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "SHHH! I\u2019m serious!"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
 --- !u!1 &178225613
 GameObject:
   m_ObjectHideFlags: 0
@@ -30132,7 +30058,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355868828
 GameObject:
@@ -30208,7 +30134,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365767778
 GameObject:
@@ -44224,7 +44150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.33, y: -0.11999976, z: -10}
+  m_LocalPosition: {x: -9.25, y: 0.88000023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44386,7 +44312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573370403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.33, y: -0.11999976, z: -10}
+  m_LocalPosition: {x: -9.25, y: 0.88000023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83351,7 +83277,7 @@ Transform:
   - {fileID: 863663560}
   - {fileID: 1334086139}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &641855782
 GameObject:
@@ -83601,7 +83527,7 @@ RectTransform:
   - {fileID: 962291388}
   - {fileID: 1359884483}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -88952,8 +88878,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860248189}
-  - component: {fileID: 860248191}
   - component: {fileID: 860248190}
+  - component: {fileID: 860248191}
   m_Layer: 0
   m_Name: Tree Stump
   m_TagString: Untagged
@@ -89011,36 +88937,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 860248188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (It has a cut in the middle, like if something sharp was lodged into
-      it)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 0}
-    sentence: (The cut looks rather recent)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
+  sections: []
 --- !u!1 &863663559
 GameObject:
   m_ObjectHideFlags: 0
@@ -89085,7 +88985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 876797838}
   - component: {fileID: 876797840}
-  - component: {fileID: 876797839}
+  - component: {fileID: 876797841}
   m_Layer: 0
   m_Name: Cart B
   m_TagString: Untagged
@@ -89108,37 +89008,6 @@ Transform:
   m_Father: {fileID: 679610499}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &876797839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876797837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (This road cart looks quite used!)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
 --- !u!61 &876797840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89165,6 +89034,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8877125, y: 1.7310562}
   m_EdgeRadius: 0
+--- !u!114 &876797841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876797837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections: []
 --- !u!1 &906705385
 GameObject:
   m_ObjectHideFlags: 0
@@ -95599,6 +95481,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &946608428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946608429}
+  - component: {fileID: 946608430}
+  - component: {fileID: 946608431}
+  m_Layer: 0
+  m_Name: Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946608429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946608428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.15, y: 1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1720113744}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &946608430
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946608428}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.91810113}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.2588468}
+  m_EdgeRadius: 0
+--- !u!114 &946608431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946608428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections:
+  - sectionText: "(Deserters aren\u2019t easily forgiven and it would be hard to
+      go back unnoticed, let\u2019s try and find another way out first)"
+    totalSentences: 1
+  - sectionText: "(If nothing else work I\u2019ll try my luck going back\u2026)+(but
+      that\u2019s a last resort)"
+    totalSentences: 2
 --- !u!1 &962291387
 GameObject:
   m_ObjectHideFlags: 0
@@ -95650,7 +95610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003517015}
   - component: {fileID: 1003517017}
-  - component: {fileID: 1003517016}
+  - component: {fileID: 1003517018}
   m_Layer: 0
   m_Name: Clothe Bags
   m_TagString: Untagged
@@ -95673,45 +95633,6 @@ Transform:
   m_Father: {fileID: 679610499}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1003517016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003517014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (These bags a filled with clothes)+(Though they are in good shape,
-      they are wet and smell a bit weird)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: (There are children and adult clothes inside)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
 --- !u!61 &1003517017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95738,6 +95659,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1003517018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003517014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections: []
 --- !u!1001 &1102569466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95745,6 +95679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1552084832, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
+      propertyPath: uiManagerRef
+      value: 
+      objectReference: {fileID: 670838478}
     - target: {fileID: 5238522059213581049, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -95755,11 +95693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.33
+      value: -9.25
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95805,7 +95743,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1108208527}
   - component: {fileID: 1108208528}
-  - component: {fileID: 1108208529}
   m_Layer: 0
   m_Name: House A
   m_TagString: Untagged
@@ -95854,146 +95791,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1108208529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108208526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: "[Sounds like children's voices are murmuring something\u2026]"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
---- !u!1001 &1150880299
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6449296285370776052, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880521, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880533, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_Name
-      value: NOT THIS ONE
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449296285829880533, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7386985446916643908, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
 --- !u!1 &1203576481
 GameObject:
   m_ObjectHideFlags: 0
@@ -96622,7 +96419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219083248}
   - component: {fileID: 1219083250}
-  - component: {fileID: 1219083249}
+  - component: {fileID: 1219083251}
   m_Layer: 0
   m_Name: PotatoBox
   m_TagString: Untagged
@@ -96645,74 +96442,6 @@ Transform:
   m_Father: {fileID: 679610499}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1219083249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219083247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (Some potato boxes)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 0}
-    sentence: (Maybe I can get a few for the trip... they smell kind of funny but
-      not rotten)+(...yet)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: '[you try grabbing one but fail]+(the crevices are to small and it
-      is well shut)'
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 2
-  - dialogueCharacter: {fileID: 0}
-    sentence: (Why would someone leave so many boxes of food out in the open)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 0}
-    sentence: (If I had some tool I could open it)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 0}
-    sentence: (Maybe is better to just ask for food in the town)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
 --- !u!61 &1219083250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96739,6 +96468,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8877125, y: 1.7310562}
   m_EdgeRadius: 0
+--- !u!114 &1219083251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219083247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections: []
 --- !u!1 &1253421527
 GameObject:
   m_ObjectHideFlags: 0
@@ -96807,8 +96549,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1258115341}
   - component: {fileID: 1258115343}
-  - component: {fileID: 1258115342}
   - component: {fileID: 1258115344}
+  - component: {fileID: 1258115345}
   m_Layer: 0
   m_Name: Cart A
   m_TagString: Untagged
@@ -96831,37 +96573,6 @@ Transform:
   m_Father: {fileID: 679610499}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1258115342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258115340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (This road cart looks quite used)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
 --- !u!61 &1258115343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96889,6 +96600,19 @@ BoxCollider2D:
   m_Size: {x: 1.8877125, y: 1.7310562}
   m_EdgeRadius: 0
 --- !u!114 &1258115344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258115340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections: []
+--- !u!114 &1258115345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99314,6 +99038,7 @@ Transform:
   m_Children:
   - {fileID: 591746040}
   - {fileID: 1390440408}
+  - {fileID: 1720113744}
   m_Father: {fileID: 638228507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100426,24 +100151,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.71477604}
   m_EdgeRadius: 0
---- !u!1 &1552084825 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5238522059213581049, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
-  m_PrefabInstance: {fileID: 1102569466}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1552084832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552084825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1233b28355c0f54cbbce90f8e5ff0e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiManagerRef: {fileID: 670838478}
 --- !u!1 &1628370503
 GameObject:
   m_ObjectHideFlags: 0
@@ -100865,8 +100572,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650872528}
-  - component: {fileID: 1650872530}
-  - component: {fileID: 1650872529}
   - component: {fileID: 1650872531}
   m_Layer: 0
   m_Name: Entrance
@@ -100890,64 +100595,6 @@ Transform:
   m_Father: {fileID: 1390440408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1650872529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650872527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 0779ef71b4ee2b94791b1a73fb6de447, type: 2}
-    sentence: If possible I'll like to avoid going back, deserters tend to be hunt
-      down for several days
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
---- !u!61 &1650872530
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650872527}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17082381}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3.950592}
-  m_EdgeRadius: 0
 --- !u!61 &1650872531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -103744,6 +103391,38 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1720113743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720113744}
+  m_Layer: 0
+  m_Name: Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720113744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720113743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 946608429}
+  m_Father: {fileID: 1384261895}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733762097
 GameObject:
   m_ObjectHideFlags: 0
@@ -103970,43 +103649,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878926653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  startDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  nextSentenceDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDialogueEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerState: 1
-  sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: (The doorknob looks newer than the rest of the building)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
-  - dialogueCharacter: {fileID: 0}
-    sentence: "(It is seems silent\u2026)+...+ (wait, I think I hear something breathing
-      inside)"
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 3
-  - dialogueCharacter: {fileID: 0}
-    sentence: (Maybe they keep animals inside)
-    sentenceSound: {fileID: 0}
-    sentenceEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    sectionsCount: 1
+  sections: []
 --- !u!1 &1921387884
 GameObject:
   m_ObjectHideFlags: 0
