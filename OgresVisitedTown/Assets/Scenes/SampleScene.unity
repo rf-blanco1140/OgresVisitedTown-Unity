@@ -88940,7 +88940,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (It has a cut in the middle, like if something sharp was lodged
+      into it)
+    totalSentences: 1
+  - sectionText: (The cut looks rather recent)
+    totalSentences: 1
 --- !u!1 &863663559
 GameObject:
   m_ObjectHideFlags: 0
@@ -89046,7 +89051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (This road cart looks quite used)
+    totalSentences: 1
 --- !u!1 &906705385
 GameObject:
   m_ObjectHideFlags: 0
@@ -95554,11 +95561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sections:
   - sectionText: "(Deserters aren\u2019t easily forgiven and it would be hard to
-      go back unnoticed, let\u2019s try and find another way out first)"
-    totalSentences: 1
-  - sectionText: "(If nothing else work I\u2019ll try my luck going back\u2026)+(but
-      that\u2019s a last resort)"
-    totalSentences: 2
+      go back unnoticed, let\u2019s try and find another way out first)+(If nothing
+      else work I\u2019ll try my luck going back\u2026)+(but that\u2019s a last resort)"
+    totalSentences: 3
 --- !u!1 &962291387
 GameObject:
   m_ObjectHideFlags: 0
@@ -95671,7 +95676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (These bags a filled with clothes)+(Though they are in good shape,
+      they are wet and smell a bit weird)
+    totalSentences: 2
+  - sectionText: (There are children and adult clothes inside)
+    totalSentences: 1
 --- !u!1001 &1102569466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96480,7 +96490,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (Some potato boxes)
+    totalSentences: 1
+  - sectionText: "(Maybe I can get a few for the trip\u2026)+( they smell kind of
+      funny but not rotten)+(...yet)"
+    totalSentences: 3
+  - sectionText: '[you try grabbing one but fail]+(the crevices are to small and
+      it is well shut)'
+    totalSentences: 2
+  - sectionText: (Why would someone leave so many boxes of food out in the open)
+    totalSentences: 1
+  - sectionText: (If I had some tool I could open it)
+    totalSentences: 1
+  - sectionText: (Maybe is better to just ask for food in the town)
+    totalSentences: 1
 --- !u!1 &1253421527
 GameObject:
   m_ObjectHideFlags: 0
@@ -96549,7 +96573,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1258115341}
   - component: {fileID: 1258115343}
-  - component: {fileID: 1258115344}
   - component: {fileID: 1258115345}
   m_Layer: 0
   m_Name: Cart A
@@ -96599,19 +96622,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8877125, y: 1.7310562}
   m_EdgeRadius: 0
---- !u!114 &1258115344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258115340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sections: []
 --- !u!114 &1258115345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96624,7 +96634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (This road cart looks quite used)
+    totalSentences: 1
 --- !u!1 &1274192969
 GameObject:
   m_ObjectHideFlags: 0
@@ -103652,7 +103664,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - sectionText: (The doorknob looks newer than the rest of the building)
+    totalSentences: 1
+  - sectionText: "(It is seems silent\u2026)+ ...+(wait, I think I hear something
+      breathing inside)"
+    totalSentences: 3
+  - sectionText: (Maybe they keep animals inside)
+    totalSentences: 1
 --- !u!1 &1921387884
 GameObject:
   m_ObjectHideFlags: 0
