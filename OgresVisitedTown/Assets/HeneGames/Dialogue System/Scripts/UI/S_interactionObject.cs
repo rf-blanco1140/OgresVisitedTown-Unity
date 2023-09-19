@@ -47,7 +47,6 @@ public class S_interactionObject : MonoBehaviour
     }
     public bool IsEndOfSection()
     {
-        Debug.Log("current Section ID: "+currentSectionID);
         bool answer = false;
         if(currentSentenceID== sections[currentSectionID].totalSentences)
         {
