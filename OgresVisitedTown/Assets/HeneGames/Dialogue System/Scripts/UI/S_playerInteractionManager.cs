@@ -43,16 +43,27 @@ public class S_playerInteractionManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            bool isEndOfInteraction = currentInteractable.IsEndOfSection();
-            uiManagerRef.NotifyInteractionEnd(isEndOfInteraction);
-            if (isEndOfInteraction == false)
+            if (!IsUiWriting())
             {
-                uiManagerRef.AttemptInteraction(currentInteractable.GetCurrentSentence());
+                bool isEndOfInteraction = currentInteractable.IsEndOfSection();
+                uiManagerRef.NotifyInteractionEnd(isEndOfInteraction);
+                if (isEndOfInteraction == false)
+                {
+                    uiManagerRef.AttemptInteraction(currentInteractable.GetCurrentSentence());
+                }
+                else
+                {
+                    uiManagerRef.CloseDialogUI();
+                }
             }
             else
             {
-                uiManagerRef.CloseDialogUI();
+                uiManagerRef.PasteAllTextToTextmesh();
             }
         }
+    }
+    private bool IsUiWriting()
+    {
+        return uiManagerRef.IsItWriting();
     }
 }

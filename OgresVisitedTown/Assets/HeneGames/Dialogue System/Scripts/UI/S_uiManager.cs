@@ -11,6 +11,8 @@ public class S_uiManager : MonoBehaviour
     private bool isInteracting;
     private bool hasFinishedDialog;
     [SerializeField] private float textAnimationSpeed;
+    private bool isWriting;
+    private string currentTextString;
 
     //UI Elements
     [SerializeField] private Image portrait;
@@ -25,6 +27,7 @@ public class S_uiManager : MonoBehaviour
         isInteracting = false;
         hasFinishedDialog = false;
         textAnimationSpeed = 0.5f;
+        isWriting = false;
     }
     public void InteractionRegistereed(S_interactionObject interObject)
     {
@@ -39,7 +42,15 @@ public class S_uiManager : MonoBehaviour
     public void AttemptInteraction(string pSentenceText)
     {
         TurnDialogWindowOnOff();
-        StartCoroutine(WriteTextToTextmesh(pSentenceText));
+        if (!isWriting)
+        {
+            currentTextString = pSentenceText;
+            StartCoroutine(WriteTextToTextmesh(pSentenceText));
+        }
+        else
+        {
+            StopAllCoroutines();
+        }
     }
     private void TurnInteractionUIOnOff()
     {
@@ -73,6 +84,7 @@ public class S_uiManager : MonoBehaviour
     }
     IEnumerator WriteTextToTextmesh(string _text)
     {
+        isWriting = true;
         guiSectionTextBox.text = "";
         char[] _letters = _text.ToCharArray();
 
@@ -83,6 +95,16 @@ public class S_uiManager : MonoBehaviour
             guiSectionTextBox.text += _letter;
             yield return new WaitForSeconds(0.1f * _speed);
         }
+    }
+    public bool IsItWriting()
+    {
+        return isWriting;
+    }
+    public void PasteAllTextToTextmesh()
+    {
+        StopAllCoroutines();
+        guiSectionTextBox.text = currentTextString;
+        isWriting = false;
     }
     public void CloseDialogUI()
     {
