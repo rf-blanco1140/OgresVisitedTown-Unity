@@ -399,6 +399,7 @@
 "Assets/HeneGames/Dialogue System/Scripts/Movement2D.cs"
 "Assets/HeneGames/Dialogue System/Scripts/SimpleNavAgentAnimation.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_dialogText.cs"
+"Assets/HeneGames/Dialogue System/Scripts/UI/S_interactionConsecuencesManager.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_interactionObject.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_playerInteractionManager.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_uiManager.cs"
