@@ -95,6 +95,7 @@ public class S_uiManager : MonoBehaviour
             guiSectionTextBox.text += _letter;
             yield return new WaitForSeconds(0.1f * _speed);
         }
+        isWriting = false;
     }
     public bool IsItWriting()
     {

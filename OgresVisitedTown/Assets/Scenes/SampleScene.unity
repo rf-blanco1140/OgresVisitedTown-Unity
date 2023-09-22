@@ -1047,9 +1047,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
+    triggerNotification: 0
 --- !u!61 &94799390
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27412,24 +27415,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: "how did you found that old entrance, it\u2019s very rarely used"
     totalSentences: 0
+    triggerNotification: 0
   - sectionText: "Hmm? You want to talk? How very odd of a person you are+I guess
       being isolated with the army does that to you+Still, you should stop that+I
       don\u2019t care if they scream at me for speaking too much with a stranger,
       but who knows what they might do to you\u2026"
     totalSentences: 4
+    triggerNotification: 0
   - sectionText: "You still want to talk?! you are a funny one ain\u2019t you!+ok,
       I\u2019ll tell you a quick gossip, we don\u2019t really hate the army so don\u2019t
       take what the other might say to heart, ok?+it\u2019s just that one gotta be
       careful these days, I\u2019m sure you understand\r"
     totalSentences: 3
+    triggerNotification: 0
   - sectionText: Stop it kid, they might start getting suspicious if we talk too
       much
     totalSentences: 1
+    triggerNotification: 0
   - sectionText: "SHHH! I\u2019m serious!"
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &178225613
 GameObject:
   m_ObjectHideFlags: 0
@@ -30200,9 +30210,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
+    triggerNotification: 0
 --- !u!61 &370114872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30274,11 +30287,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[the doorknob is full of dust]'
     totalSentences: 0
+    triggerNotification: 0
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 4
+    triggerNotification: 0
 --- !u!61 &393548761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44261,7 +44278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.25, y: 0.88000023, z: -10}
+  m_LocalPosition: {x: 34.54, y: 0.88000023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44423,7 +44440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573370403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.25, y: 0.88000023, z: -10}
+  m_LocalPosition: {x: 34.54, y: 0.88000023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89051,12 +89068,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (It has a cut in the middle, like if something sharp was lodged
       into it)
     totalSentences: 1
+    triggerNotification: 0
   - sectionText: (The cut looks rather recent)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &863663559
 GameObject:
   m_ObjectHideFlags: 0
@@ -89162,9 +89183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (This road cart looks quite used)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &906705385
 GameObject:
   m_ObjectHideFlags: 0
@@ -95670,11 +95694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: "(Deserters aren\u2019t easily forgiven and it would be hard to
       go back unnoticed, let\u2019s try and find another way out first)+(If nothing
       else work I\u2019ll try my luck going back\u2026)+(but that\u2019s a last resort)"
     totalSentences: 3
+    triggerNotification: 0
 --- !u!1 &962291387
 GameObject:
   m_ObjectHideFlags: 0
@@ -95787,12 +95814,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (These bags a filled with clothes)+(Though they are in good shape,
       they are wet and smell a bit weird)
     totalSentences: 2
+    triggerNotification: 0
   - sectionText: (There are children and adult clothes inside)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1001 &1102569466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95814,7 +95845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.25
+      value: 34.54
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.y
@@ -95925,9 +95956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: "[Sounds like children's voices are murmuring something\u2026]"
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &1203576481
 GameObject:
   m_ObjectHideFlags: 0
@@ -96617,21 +96651,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (Some potato boxes)
     totalSentences: 1
+    triggerNotification: 1
   - sectionText: "(Maybe I can get a few for the trip\u2026)+( they smell kind of
       funny but not rotten)+(...yet)"
     totalSentences: 3
+    triggerNotification: 0
   - sectionText: '[you try grabbing one but fail]+(the crevices are to small and
       it is well shut)'
     totalSentences: 2
+    triggerNotification: 0
   - sectionText: (Why would someone leave so many boxes of food out in the open)
     totalSentences: 1
+    triggerNotification: 0
   - sectionText: (If I had some tool I could open it)
     totalSentences: 1
+    triggerNotification: 0
   - sectionText: (Maybe is better to just ask for food in the town)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &1245892596
 GameObject:
   m_ObjectHideFlags: 0
@@ -96677,16 +96719,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[Sounds like a woman is crying]'
     totalSentences: 0
+    triggerNotification: 0
   - sectionText: "[a kids voice] \u201CGO AWAY! you are making mum afraid again!+...+...+\u201C...why
       won\u2019t you go away!"
     totalSentences: 4
+    triggerNotification: 0
   - sectionText: "If you don\u2019t go away I\u2019ll call the adults!"
     totalSentences: 3
+    triggerNotification: 0
   - sectionText: "I told you so\u2026 "
     totalSentences: 1
+    triggerNotification: 0
 --- !u!61 &1245892599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96842,9 +96890,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (This road cart looks quite used)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &1274192969
 GameObject:
   m_ObjectHideFlags: 0
@@ -100416,9 +100467,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
+    triggerNotification: 0
 --- !u!61 &1572030231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -103685,6 +103739,50 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1693814597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693814598}
+  - component: {fileID: 1693814599}
+  m_Layer: 0
+  m_Name: Consecuences Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693814598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693814597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56.984062, y: 1.4294548, z: -0.13411951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693814599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693814597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25939987012f527419a93b7496a262a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1710672818
 GameObject:
   m_ObjectHideFlags: 0
@@ -103730,9 +103828,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
+    triggerNotification: 0
 --- !u!61 &1710672821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -104020,14 +104121,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  consecuence: 0
   sections:
   - sectionText: (The doorknob looks newer than the rest of the building)
     totalSentences: 1
+    triggerNotification: 0
   - sectionText: "(It seems silent\u2026)+ ...+(wait, I think I hear something breathing
       inside)"
     totalSentences: 3
+    triggerNotification: 0
   - sectionText: (Maybe they keep animals inside)
     totalSentences: 1
+    triggerNotification: 0
 --- !u!1 &1921387884
 GameObject:
   m_ObjectHideFlags: 0
