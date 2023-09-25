@@ -27430,7 +27430,7 @@ MonoBehaviour:
     triggersNotification: 0
     isConsecuence: 1
   - sectionText: "how did you found that old entrance, it\u2019s very rarely used"
-    totalSentences: 0
+    totalSentences: 1
     triggersNotification: 0
     isConsecuence: 0
   - sectionText: "Hmm? You want to talk? How very odd of a person you are+I guess
@@ -30312,7 +30312,7 @@ MonoBehaviour:
   reactsToExclusiveConsecuence: 0
   sections:
   - sectionText: '[the doorknob is full of dust]'
-    totalSentences: 0
+    totalSentences: 1
     triggersNotification: 0
     isConsecuence: 0
   - sectionText: '[no one answers and you can hear anything]'
@@ -96692,7 +96692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consecuencesManagerRef: {fileID: 0}
-  iTriggerConsecuence: 0
+  iTriggerConsecuence: 1
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
   sections:
@@ -96768,12 +96768,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consecuencesManagerRef: {fileID: 0}
-  iTriggerConsecuence: 0
-  iReactToConsecuence: 0
+  iTriggerConsecuence: 4
+  iReactToConsecuence: 3
   reactsToExclusiveConsecuence: 0
   sections:
   - sectionText: '[Sounds like a woman is crying]'
-    totalSentences: 0
+    totalSentences: 1
     triggersNotification: 0
     isConsecuence: 0
   - sectionText: "[a kids voice] \u201CGO AWAY! you are making mum afraid again!+...+...+\u201C...why
@@ -96787,7 +96787,7 @@ MonoBehaviour:
     isConsecuence: 0
   - sectionText: "I told you so\u2026 "
     totalSentences: 1
-    triggersNotification: 0
+    triggersNotification: 1
     isConsecuence: 0
 --- !u!61 &1245892599
 BoxCollider2D:
