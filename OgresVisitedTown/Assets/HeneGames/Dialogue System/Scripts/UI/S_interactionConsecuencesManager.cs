@@ -69,4 +69,33 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     {
         wasNotifiedOfBridge = true;
     }
+    public bool HasTriggeredConsecuence(Consecuence pConsecuence)
+    {
+        bool answer = false;
+        switch (pConsecuence)
+        {
+            case Consecuence.Potatos:
+                answer = hasInspectedPotatos;
+                break;
+            case Consecuence.HouseA:
+                answer = botheredHouseA;
+                break;
+            case Consecuence.HouseB:
+                answer = botheredHouseB;
+                break;
+            case Consecuence.HouseC:
+                answer = botheredHouseC;
+                break;
+            case Consecuence.Thief:
+                answer = caughtStealing;
+                break;
+            case Consecuence.BridgeReady:
+                answer = wasNotifiedOfBridge;
+                break;
+        }
+
+        return answer;
+    }
 }
+
+public enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, BridgeReady }

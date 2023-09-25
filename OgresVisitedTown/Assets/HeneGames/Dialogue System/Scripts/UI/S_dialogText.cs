@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class S_dialogText : MonoBehaviour
 {
-    [Header("------------------------------------------------------------")]
-
-    [TextArea(3, 10)]
-    private string sectionText;
-    private int totalSentences;
+    [Header("Dialogue")]
+    [SerializeField] private List<DialogTextContainer> sections = new List<DialogTextContainer>();
+    public List<DialogTextContainer> GetOptionalSections()
+    {
+        return sections;
+    }
 }

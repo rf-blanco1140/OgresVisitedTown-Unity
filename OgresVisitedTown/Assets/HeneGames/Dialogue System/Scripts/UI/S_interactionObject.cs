@@ -9,9 +9,10 @@ public class S_interactionObject : MonoBehaviour
     private int currentSentenceID;
     private string[] currentSentences;
     [SerializeField] private S_interactionConsecuencesManager consecuencesManagerRef;
-    private enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, BridgeReady}
-    [SerializeField] private Consecuence consecuence;
-    [SerializeField] private bool hasExclusiveConsecuence;    
+    [SerializeField] private Consecuence iTriggerConsecuence;
+    [SerializeField] private Consecuence iReactToConsecuence;
+    [SerializeField] private bool reactsToExclusiveConsecuence;
+    
     [Header("Dialogue")]
     [SerializeField] private List<DialogTextContainer> sections = new List<DialogTextContainer>();
 
@@ -23,10 +24,31 @@ public class S_interactionObject : MonoBehaviour
     }
     public string GetCurrentSentence()
     {
+        //if reacts to exclusive consecuences and triggered their conditions, replace sections list with the corresponding sections list, set the IDs to 0 if is the first interaction after triggering the consecuences
+        //else do the standard
         if(currentSentenceID==0)
         {
+            if(sections[currentSectionID].isConsecuence)
+            {
+                if(consecuencesManagerRef.HasTriggeredConsecuence(iReactToConsecuence))
+                {
+                    currentSentences = DiviveSectionInSentences();
+                    if (sections[currentSectionID].triggersNotification)
+                    {
+                        NotifyConsecuences();
+                    }
+
+                    string currentSentenceConsecuence = currentSentences[currentSentenceID];
+                    currentSentenceID++;
+                    return currentSentenceConsecuence;
+                }
+                else
+                {
+                    PrepareForNextSection();
+                }
+            }
             currentSentences = DiviveSectionInSentences();
-            if(sections[currentSectionID].triggerNotification)
+            if(sections[currentSectionID].triggersNotification)
             {
                 NotifyConsecuences();
             }
@@ -74,7 +96,7 @@ public class S_interactionObject : MonoBehaviour
     }
     private void NotifyConsecuences()
     {
-        switch (consecuence)
+        switch (iTriggerConsecuence)
         {
             case Consecuence.Potatos:
                 consecuencesManagerRef.NotifyInspectedPotatos();
@@ -108,6 +130,6 @@ public class DialogTextContainer
     [TextArea(3, 10)]
     public string sectionText;
     public int totalSentences;
-    public bool triggerNotification;
+    public bool triggersNotification;
     public bool isConsecuence;
 }
