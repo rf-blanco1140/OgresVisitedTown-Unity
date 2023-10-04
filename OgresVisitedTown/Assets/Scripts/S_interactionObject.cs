@@ -12,7 +12,7 @@ public class S_interactionObject : MonoBehaviour
     [SerializeField] private Consecuence iTriggerConsecuence;
     [SerializeField] private Consecuence iReactToConsecuence;
     [SerializeField] private bool reactsToExclusiveConsecuence;
-    
+
     [Header("Dialogue")]
     [SerializeField] private List<DialogTextContainer> sections = new List<DialogTextContainer>();
 
@@ -113,8 +113,11 @@ public class S_interactionObject : MonoBehaviour
             case Consecuence.Thief:
                 consecuencesManagerRef.NotifyStealing();
                 break;
-            case Consecuence.Crowbar:
-                consecuencesManagerRef.NotifyCrowbar();
+            case Consecuence.CrowbarPermit:
+                consecuencesManagerRef.NotifyPermitedToCrowbar();
+                break;
+            case Consecuence.CrowbarCollection:
+                consecuencesManagerRef.NotifyObtainedCrowbar();
                 break;
             case Consecuence.BridgeReady:
                 consecuencesManagerRef.GetWasNotifiedOfBridge();

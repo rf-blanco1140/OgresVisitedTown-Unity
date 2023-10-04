@@ -8,6 +8,10 @@ public class S_playerInteractionManager : MonoBehaviour
     private S_interactionObject currentInteractable;
     private List<S_interactionObject> interactionsList;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         interactionsList = new List<S_interactionObject>();

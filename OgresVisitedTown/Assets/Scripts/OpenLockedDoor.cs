@@ -15,7 +15,7 @@ public class OpenLockedDoor : MonoBehaviour
 
     private void Update()
     {
-        canOpenDoor = consecuencesManagerRef.GetWasNotifiedOfCrowbar();
+        canOpenDoor = consecuencesManagerRef.GetPermitedToCrowbar();
         if(canOpenDoor)
         {
             door.SetActive(false);

@@ -21,6 +21,10 @@ public class S_uiManager : MonoBehaviour
     [SerializeField] private GameObject dialogueWindow;
     [SerializeField] private GameObject interactionUI;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         interactionsList = new List<S_interactionObject>();

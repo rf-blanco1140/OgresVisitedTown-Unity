@@ -10,8 +10,14 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     private bool botheredHouseC;
     private bool caughtStealing;
     private bool givenPermisionCrowbar;
+    private bool obtainedCrowbar;
     private bool wasNotifiedOfBridge;
 
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         bool defaultValue = false;
@@ -71,13 +77,22 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     {
         wasNotifiedOfBridge = true;
     }
-    public bool GetWasNotifiedOfCrowbar()
+    public bool GetPermitedToCrowbar()
     {
         return givenPermisionCrowbar;
     }
-    public void NotifyCrowbar()
+    public void NotifyPermitedToCrowbar()
     {
         givenPermisionCrowbar = true;
+    }
+    public bool GetObtainedCrowbar()
+    {
+        return obtainedCrowbar;
+    }
+    public void NotifyObtainedCrowbar()
+    {
+        obtainedCrowbar = true;
+        Debug.Log("Consegui un Crowbar!!");
     }
     public bool HasTriggeredConsecuence(Consecuence pConsecuence)
     {
@@ -108,4 +123,4 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     }
 }
 
-public enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, Crowbar, BridgeReady }
+public enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, CrowbarPermit, CrowbarCollection, BridgeReady }
