@@ -404,6 +404,7 @@
 "Assets/Scripts/S_interactionConsecuencesManager.cs"
 "Assets/Scripts/S_interactionObject.cs"
 "Assets/Scripts/S_playerInteractionManager.cs"
+"Assets/Scripts/S_PlayerSpawnManager.cs"
 "Assets/Scripts/S_uiManager.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
