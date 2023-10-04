@@ -5,10 +5,21 @@ using UnityEngine;
 public class S_PlayerSpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerRef;
+    private Vector2 currentCheckpoint;
 
-    private void Start()
+    private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         playerRef = FindObjectOfType<S_playerInteractionManager>().gameObject;
-        playerRef.transform.position = transform.position;
+    }
+
+    public void DefineCheckpoint(Vector2 pNewPosition)
+    {
+        currentCheckpoint = pNewPosition;
+    }
+
+    public void SetPlayerPosition()
+    {
+        playerRef.transform.position = currentCheckpoint;
     }
 }

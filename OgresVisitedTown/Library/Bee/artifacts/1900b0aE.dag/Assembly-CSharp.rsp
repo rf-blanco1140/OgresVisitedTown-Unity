@@ -400,6 +400,7 @@
 "Assets/HeneGames/Dialogue System/Scripts/SimpleNavAgentAnimation.cs"
 "Assets/Scripts/OpenLockedDoor.cs"
 "Assets/Scripts/Script_PlayerMovement.cs"
+"Assets/Scripts/S_Checkpoint.cs"
 "Assets/Scripts/S_dialogText.cs"
 "Assets/Scripts/S_interactionConsecuencesManager.cs"
 "Assets/Scripts/S_interactionObject.cs"
