@@ -9,6 +9,7 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     private bool botheredHouseB;
     private bool botheredHouseC;
     private bool caughtStealing;
+    private bool givenPermisionCrowbar;
     private bool wasNotifiedOfBridge;
 
     private void Start()
@@ -19,6 +20,7 @@ public class S_interactionConsecuencesManager : MonoBehaviour
         botheredHouseB = defaultValue;
         botheredHouseC = defaultValue;
         caughtStealing = defaultValue;
+        givenPermisionCrowbar = defaultValue;
         wasNotifiedOfBridge = defaultValue;
     }
     public bool GetHasInespectedPotatos()
@@ -69,6 +71,14 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     {
         wasNotifiedOfBridge = true;
     }
+    public bool GetWasNotifiedOfCrowbar()
+    {
+        return givenPermisionCrowbar;
+    }
+    public void NotifyCrowbar()
+    {
+        givenPermisionCrowbar = true;
+    }
     public bool HasTriggeredConsecuence(Consecuence pConsecuence)
     {
         bool answer = false;
@@ -98,4 +108,4 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     }
 }
 
-public enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, BridgeReady }
+public enum Consecuence { None, Potatos, HouseA, HouseB, HouseC, Thief, Crowbar, BridgeReady }

@@ -403,6 +403,7 @@
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_interactionObject.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_playerInteractionManager.cs"
 "Assets/HeneGames/Dialogue System/Scripts/UI/S_uiManager.cs"
+"Assets/Scripts/OpenLockedDoor.cs"
 "Assets/Scripts/Script_PlayerMovement.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

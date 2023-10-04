@@ -113,6 +113,9 @@ public class S_interactionObject : MonoBehaviour
             case Consecuence.Thief:
                 consecuencesManagerRef.NotifyStealing();
                 break;
+            case Consecuence.Crowbar:
+                consecuencesManagerRef.NotifyCrowbar();
+                break;
             case Consecuence.BridgeReady:
                 consecuencesManagerRef.GetWasNotifiedOfBridge();
                 break;
