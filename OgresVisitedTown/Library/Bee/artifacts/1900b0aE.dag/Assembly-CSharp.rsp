@@ -402,6 +402,7 @@
 "Assets/Scripts/Script_PlayerMovement.cs"
 "Assets/Scripts/S_Checkpoint.cs"
 "Assets/Scripts/S_dialogText.cs"
+"Assets/Scripts/S_GameEnd.cs"
 "Assets/Scripts/S_interactionConsecuencesManager.cs"
 "Assets/Scripts/S_interactionObject.cs"
 "Assets/Scripts/S_playerInteractionManager.cs"
