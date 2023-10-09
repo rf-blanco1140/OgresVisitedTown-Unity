@@ -21,8 +21,8 @@ public class S_GameEnd : MonoBehaviour
     }
     public void TriggerEndSequence(string pEndingText)
     {
-        playerMovementRef.EnableDisableMovement();
-        playerInteractionRef.DisableEnableInputs();
+        playerMovementRef.EnableMovement(false);
+        playerInteractionRef.EnableInputs(false);
         uiManagerRef.EnableDisableEndingUI(pEndingText);
     }
     //stop player movement - DONE

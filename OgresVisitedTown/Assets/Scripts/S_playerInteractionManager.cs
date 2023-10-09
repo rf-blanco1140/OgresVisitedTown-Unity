@@ -7,8 +7,8 @@ public class S_playerInteractionManager : MonoBehaviour
     [SerializeField] private S_uiManager uiManagerRef;
     private S_interactionObject currentInteractable;
     private List<S_interactionObject> interactionsList;
-    private bool isDisabled;
-
+    private bool isEnabeled;
+    private Script_PlayerMovement playerMovementRef;
 
     private void Awake()
     {
@@ -17,7 +17,8 @@ public class S_playerInteractionManager : MonoBehaviour
     private void Start()
     {
         interactionsList = new List<S_interactionObject>();
-        isDisabled = false;
+        isEnabeled = true;
+        playerMovementRef = FindObjectOfType<Script_PlayerMovement>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,7 +49,7 @@ public class S_playerInteractionManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && !isDisabled)
+        if(Input.GetKeyDown(KeyCode.Space) && isEnabeled)
         {
             if (!IsUiWriting() && currentInteractable != null)
             {
@@ -57,10 +58,12 @@ public class S_playerInteractionManager : MonoBehaviour
                 if (isEndOfInteraction == false)
                 {
                     uiManagerRef.AttemptInteraction(currentInteractable.GetCurrentSentence());
+                    playerMovementRef.EnableMovement(false);
                 }
                 else
                 {
                     uiManagerRef.CloseDialogUI();
+                    playerMovementRef.EnableMovement(true);
                 }
             }
             else
@@ -73,16 +76,8 @@ public class S_playerInteractionManager : MonoBehaviour
     {
         return uiManagerRef.IsItWriting();
     }
-    public void DisableEnableInputs()
+    public void EnableInputs(bool pIsEnabled)
     {
-        switch (isDisabled)
-        {
-            case true:
-                isDisabled = false;
-                break;
-            case false:
-                isDisabled = true;
-                break;
-        }
+        isEnabeled = pIsEnabled;
     }
 }
