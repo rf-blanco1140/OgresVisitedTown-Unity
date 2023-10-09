@@ -14,12 +14,17 @@ public class S_uiManager : MonoBehaviour
     private bool isWriting;
     private string currentTextString;
 
-    //UI Elements
+    //UI Interaction Elements
     [SerializeField] private Image portrait;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI guiSectionTextBox;
     [SerializeField] private GameObject dialogueWindow;
     [SerializeField] private GameObject interactionUI;
+
+    //UI Ending Elements
+    [SerializeField] private TextMeshProUGUI guiEndingTextBox;
+    [SerializeField] private GameObject endingWindow;
+
 
     private void Awake()
     {
@@ -116,6 +121,24 @@ public class S_uiManager : MonoBehaviour
         TurnDialogWindowOnOff();
         TurnInteractionUIOnOff();
         hasFinishedDialog = false;
+    }
+    public void EnableDisableEndingUI(string endingText)
+    {
+        switch (endingWindow.activeSelf)
+        {
+            case true:
+                endingWindow.SetActive(false);
+                SetEndingText("");
+                break;
+            case false:
+                endingWindow.SetActive(true);
+                SetEndingText(endingText);
+                break;
+        }
+    }
+    private void SetEndingText(string pText)
+    {
+        guiEndingTextBox.text = pText;
     }
 }
 

@@ -9,25 +9,30 @@ public class Script_PlayerMovement : MonoBehaviour
     private Vector2 movementDir;
     private Animator animator;
     private bool isMoving;
+    private bool isDisabled;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isMoving = false;
+        isDisabled = false;
     }
 
     void Update()
     {
-        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        if (!isDisabled)
         {
-            movementDir.x = Input.GetAxisRaw("Horizontal");
-            movementDir.y = Input.GetAxisRaw("Vertical");
-            isMoving = true;
-        }
-        else
-        {
-            isMoving = false;
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                movementDir.x = Input.GetAxisRaw("Horizontal");
+                movementDir.y = Input.GetAxisRaw("Vertical");
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
         }
 
         animator.SetFloat("Horizontal", movementDir.x);
@@ -40,6 +45,19 @@ public class Script_PlayerMovement : MonoBehaviour
         if(isMoving)
         {
             rb.MovePosition(rb.position + movementDir * speed * Time.fixedDeltaTime);
+        }
+    }
+
+    public void EnableDisableMovement()
+    {
+        switch(isDisabled)
+        {
+            case true:
+                isDisabled = false;
+                break;
+            case false:
+                isDisabled = true;
+                break;
         }
     }
 }

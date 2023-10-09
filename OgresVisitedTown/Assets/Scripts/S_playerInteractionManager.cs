@@ -7,6 +7,8 @@ public class S_playerInteractionManager : MonoBehaviour
     [SerializeField] private S_uiManager uiManagerRef;
     private S_interactionObject currentInteractable;
     private List<S_interactionObject> interactionsList;
+    private bool isDisabled;
+
 
     private void Awake()
     {
@@ -15,6 +17,7 @@ public class S_playerInteractionManager : MonoBehaviour
     private void Start()
     {
         interactionsList = new List<S_interactionObject>();
+        isDisabled = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,7 +48,7 @@ public class S_playerInteractionManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !isDisabled)
         {
             if (!IsUiWriting())
             {
@@ -69,5 +72,17 @@ public class S_playerInteractionManager : MonoBehaviour
     private bool IsUiWriting()
     {
         return uiManagerRef.IsItWriting();
+    }
+    public void DisableEnableInputs()
+    {
+        switch (isDisabled)
+        {
+            case true:
+                isDisabled = false;
+                break;
+            case false:
+                isDisabled = true;
+                break;
+        }
     }
 }
