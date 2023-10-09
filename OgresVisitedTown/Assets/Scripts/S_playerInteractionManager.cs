@@ -50,7 +50,7 @@ public class S_playerInteractionManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && !isDisabled)
         {
-            if (!IsUiWriting())
+            if (!IsUiWriting() && currentInteractable != null)
             {
                 bool isEndOfInteraction = currentInteractable.IsEndOfSection();
                 uiManagerRef.NotifyInteractionEnd(isEndOfInteraction);
