@@ -34,6 +34,10 @@ public class Script_PlayerMovement : MonoBehaviour
                 isMoving = false;
             }
         }
+        else
+        {
+            isMoving = false;
+        }
 
         animator.SetFloat("Horizontal", movementDir.x);
         animator.SetFloat("Vertical", movementDir.y);
