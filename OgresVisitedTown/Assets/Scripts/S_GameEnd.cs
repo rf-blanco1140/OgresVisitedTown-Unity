@@ -32,11 +32,4 @@ public class S_GameEnd : MonoBehaviour
     //give options starting from checkpoint, from the start or exiting the game
     //If plays again, enable movement
     //Clean ending text
-    private void Update()
-    {
-        if (Input.GetButton("Fire1"))
-        {
-            TriggerEndSequence("lol");
-        }
-    }
 }
