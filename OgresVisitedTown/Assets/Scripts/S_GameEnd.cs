@@ -27,7 +27,7 @@ public class S_GameEnd : MonoBehaviour
     }
     //stop player movement - DONE
     //turn on ending sequence UI - DONE
-    //receive specific ending text
+    //receive specific ending text - DONE
     //wait a couple of seconds
     //give options starting from checkpoint, from the start or exiting the game
     //If plays again, enable movement

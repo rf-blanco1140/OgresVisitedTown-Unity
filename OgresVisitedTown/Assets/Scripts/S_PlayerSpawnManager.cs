@@ -22,4 +22,11 @@ public class S_PlayerSpawnManager : MonoBehaviour
     {
         playerRef.transform.position = currentCheckpoint;
     }
+
+    public void SpawnPlayer()
+    {
+        playerRef.transform.position = currentCheckpoint;
+        playerRef.GetComponent<Script_PlayerMovement>().EnableMovement(true);
+        playerRef.GetComponent<S_playerInteractionManager>().EnableInputs(true);
+    }
 }

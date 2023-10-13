@@ -13,6 +13,7 @@ public class S_uiManager : MonoBehaviour
     [SerializeField] private float textAnimationSpeed;
     private bool isWriting;
     private string currentTextString;
+    private S_PlayerSpawnManager spawnManagerRef;
 
     //UI Interaction Elements
     [SerializeField] private Image portrait;
@@ -37,6 +38,10 @@ public class S_uiManager : MonoBehaviour
         hasFinishedDialog = false;
         textAnimationSpeed = 0.5f;
         isWriting = false;
+        spawnManagerRef = FindObjectOfType<S_PlayerSpawnManager>();
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void InteractionRegistereed(S_interactionObject interObject)
     {
@@ -139,6 +144,19 @@ public class S_uiManager : MonoBehaviour
     private void SetEndingText(string pText)
     {
         guiEndingTextBox.text = pText;
+    }
+    public void LoadFromCheckpoint()
+    {
+        endingWindow.SetActive(false);
+        spawnManagerRef.SpawnPlayer();
+    }
+    private void LoadFromStart()
+    {
+
+    }
+    private void ExitGame()
+    {
+        Debug.Log("me salgo");
     }
 }
 
