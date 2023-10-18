@@ -5,24 +5,26 @@ using UnityEngine;
 
 public class S_interactionObject : MonoBehaviour
 {
-    private int currentSectionID;
-    private int currentSentenceID;
-    private string[] currentSentences;
-    [SerializeField] private S_interactionConsecuencesManager consecuencesManagerRef;
-    [SerializeField] private Consecuence iTriggerConsecuence;
-    [SerializeField] private Consecuence iReactToConsecuence;
-    [SerializeField] private bool reactsToExclusiveConsecuence;
+    protected int currentSectionID;
+    protected int currentSentenceID;
+    protected string[] currentSentences;
+    [SerializeField] protected S_interactionConsecuencesManager consecuencesManagerRef;
+    [SerializeField] protected Consecuence iTriggerConsecuence;
+    [SerializeField] protected Consecuence iReactToConsecuence;
+    [SerializeField] protected bool reactsToExclusiveConsecuence;
+    private S_uiManager uiManagerRef;
 
     [Header("Dialogue")]
-    [SerializeField] private List<DialogTextContainer> sections = new List<DialogTextContainer>();
+    [SerializeField] protected List<DialogTextContainer> sections = new List<DialogTextContainer>();
 
     private void Start()
     {
         currentSectionID = 0;
         currentSentenceID = 0;
         consecuencesManagerRef = FindObjectOfType<S_interactionConsecuencesManager>();
+        uiManagerRef = FindObjectOfType<S_uiManager>();
     }
-    public string GetCurrentSentence()
+    public virtual string GetCurrentSentence()
     {
         //if reacts to exclusive consecuences and triggered their conditions, replace sections list with the corresponding sections list, set the IDs to 0 if is the first interaction after triggering the consecuences
         //else do the standard
@@ -57,7 +59,7 @@ public class S_interactionObject : MonoBehaviour
         currentSentenceID++;
         return currentSentence;
     }
-    private string[] DiviveSectionInSentences()
+    protected string[] DiviveSectionInSentences()
     {
         string[] tCurrentSentences = new string[sections[currentSectionID].totalSentences];
         int sentenceID = 0;
@@ -94,7 +96,7 @@ public class S_interactionObject : MonoBehaviour
         }
         currentSentenceID = 0;
     }
-    private void NotifyConsecuences()
+    protected void NotifyConsecuences()
     {
         switch (iTriggerConsecuence)
         {
@@ -123,6 +125,31 @@ public class S_interactionObject : MonoBehaviour
                 consecuencesManagerRef.GetWasNotifiedOfBridge();
                 break;
         }
+    }
+    public bool AttemptInteraction()
+    {
+        bool isInteracting=true;
+        if(!uiManagerRef.IsItWriting())
+        {
+            bool isEndOfInteraction = IsEndOfSection();
+            uiManagerRef.NotifyInteractionEnd(isEndOfInteraction);
+            if(!isEndOfInteraction)
+            {
+                uiManagerRef.AttemptInteraction(GetCurrentSentence());
+                isInteracting = true;
+            }
+            else
+            {
+                uiManagerRef.CloseDialogUI();
+                isInteracting = false;
+            }
+        }
+        else
+        {
+            uiManagerRef.PasteAllTextToTextmesh();
+            isInteracting = true;
+        }
+        return isInteracting;
     }
 }
 

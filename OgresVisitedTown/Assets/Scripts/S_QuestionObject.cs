@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_QuestionObject : MonoBehaviour
+public class S_QuestionObject : S_interactionObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private S_uiManager uiManagerRef;
 
-    // Update is called once per frame
-    void Update()
+    public override string GetCurrentSentence()
     {
-        
+        string rtnText;
+        uiManagerRef.ShowHideChoiceUI(true);
+        rtnText = base.GetCurrentSentence();
+        return rtnText;
     }
 }

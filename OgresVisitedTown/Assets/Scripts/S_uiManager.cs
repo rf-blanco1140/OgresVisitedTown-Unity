@@ -19,13 +19,15 @@ public class S_uiManager : MonoBehaviour
     [SerializeField] private Image portrait;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI guiSectionTextBox;
-    [SerializeField] private GameObject dialogueWindow;
-    [SerializeField] private GameObject interactionUI;
+    [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private GameObject interactionTriggerUI;
 
     //UI Ending Elements
     [SerializeField] private TextMeshProUGUI guiEndingTextBox;
     [SerializeField] private GameObject endingWindow;
 
+    //Choice UI Elements
+    [SerializeField] private GameObject choiceUI;
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class S_uiManager : MonoBehaviour
         textAnimationSpeed = 0.5f;
         isWriting = false;
         spawnManagerRef = FindObjectOfType<S_PlayerSpawnManager>();
+        choiceUI.SetActive(false);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -55,26 +58,29 @@ public class S_uiManager : MonoBehaviour
     }
     public void AttemptInteraction(string pSentenceText)
     {
-        TurnDialogWindowOnOff();
-        if (!isWriting)
-        {
-            currentTextString = pSentenceText;
-            StartCoroutine(WriteTextToTextmesh(pSentenceText));
-        }
-        else
-        {
-            StopAllCoroutines();
+        if(!choiceUI.activeSelf)
+        { 
+            TurnDialogWindowOnOff();
+            if (!isWriting)
+            {
+                currentTextString = pSentenceText;
+                StartCoroutine(WriteTextToTextmesh(pSentenceText));
+            }
+            else
+            {
+                StopAllCoroutines();
+            }
         }
     }
     private void TurnInteractionUIOnOff()
     {
         if(interactionsList.Count>0 && !isInteracting)
         {
-            interactionUI.SetActive(true);
+            interactionTriggerUI.SetActive(true);
         }
         else
         {
-            interactionUI.SetActive(false);
+            interactionTriggerUI.SetActive(false);
         }
     }
     private void TurnDialogWindowOnOff()
@@ -83,12 +89,12 @@ public class S_uiManager : MonoBehaviour
         {
             isInteracting = true;
             TurnInteractionUIOnOff();
-            dialogueWindow.SetActive(true);
+            dialogueUI.SetActive(true);
         }
         else
         {
             isInteracting = false;
-            dialogueWindow.SetActive(false);
+            dialogueUI.SetActive(false);
             hasFinishedDialog = false;
         }
     }
@@ -157,6 +163,10 @@ public class S_uiManager : MonoBehaviour
     private void ExitGame()
     {
         Debug.Log("me salgo");
+    }
+    public void ShowHideChoiceUI(bool pShowUI)
+    {
+        choiceUI.SetActive(pShowUI);
     }
 }
 

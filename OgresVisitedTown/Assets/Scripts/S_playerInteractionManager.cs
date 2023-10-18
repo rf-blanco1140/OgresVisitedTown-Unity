@@ -51,24 +51,17 @@ public class S_playerInteractionManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && isEnabeled)
         {
-            if (!IsUiWriting() && currentInteractable != null)
+            if(currentInteractable != null)
             {
-                bool isEndOfInteraction = currentInteractable.IsEndOfSection();
-                uiManagerRef.NotifyInteractionEnd(isEndOfInteraction);
-                if (isEndOfInteraction == false)
+                bool isInteracting = currentInteractable.AttemptInteraction();
+                if (isInteracting)
                 {
-                    uiManagerRef.AttemptInteraction(currentInteractable.GetCurrentSentence());
                     playerMovementRef.EnableMovement(false);
                 }
                 else
                 {
-                    uiManagerRef.CloseDialogUI();
                     playerMovementRef.EnableMovement(true);
                 }
-            }
-            else
-            {
-                uiManagerRef.PasteAllTextToTextmesh();
             }
         }
     }

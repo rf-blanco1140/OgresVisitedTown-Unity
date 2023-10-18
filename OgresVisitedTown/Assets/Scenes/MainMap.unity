@@ -95425,11 +95425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.4
+      value: 76.57
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.z
@@ -96325,7 +96325,7 @@ MonoBehaviour:
     triggersNotification: 0
     isConsecuence: 0
   - sectionText: "If you don\u2019t go away I\u2019ll call the adults!"
-    totalSentences: 3
+    totalSentences: 1
     triggersNotification: 0
     isConsecuence: 0
   - sectionText: "I told you so\u2026 "
@@ -103791,11 +103791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.4
+      value: 76.57
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.21
+      value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103844,11 +103844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.4
+      value: 76.57
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.21
+      value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.z
