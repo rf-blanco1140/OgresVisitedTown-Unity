@@ -19,6 +19,7 @@ public class S_playerInteractionManager : MonoBehaviour
         interactionsList = new List<S_interactionObject>();
         isEnabeled = true;
         playerMovementRef = FindObjectOfType<Script_PlayerMovement>();
+        uiManagerRef = FindObjectOfType<S_uiManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

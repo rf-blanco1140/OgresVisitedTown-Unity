@@ -28,6 +28,7 @@ public class S_uiManager : MonoBehaviour
 
     //Choice UI Elements
     [SerializeField] private GameObject choiceUI;
+    [SerializeField] private Button DefaultChoiceButton;
 
     private void Awake()
     {
@@ -167,6 +168,12 @@ public class S_uiManager : MonoBehaviour
     public void ShowHideChoiceUI(bool pShowUI)
     {
         choiceUI.SetActive(pShowUI);
+        DefaultChoiceButton.Select();
+    }
+    public bool isChoiceUiActive()
+    {
+        bool answer = choiceUI.activeSelf;
+        return answer;
     }
 }
 

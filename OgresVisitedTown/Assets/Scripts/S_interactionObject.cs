@@ -12,7 +12,7 @@ public class S_interactionObject : MonoBehaviour
     [SerializeField] protected Consecuence iTriggerConsecuence;
     [SerializeField] protected Consecuence iReactToConsecuence;
     [SerializeField] protected bool reactsToExclusiveConsecuence;
-    private S_uiManager uiManagerRef;
+    protected S_uiManager uiManagerRef;
 
     [Header("Dialogue")]
     [SerializeField] protected List<DialogTextContainer> sections = new List<DialogTextContainer>();
@@ -126,7 +126,7 @@ public class S_interactionObject : MonoBehaviour
                 break;
         }
     }
-    public bool AttemptInteraction()
+    public virtual bool AttemptInteraction()
     {
         bool isInteracting=true;
         if(!uiManagerRef.IsItWriting())
