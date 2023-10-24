@@ -13,6 +13,7 @@ public class S_interactionObject : MonoBehaviour
     [SerializeField] protected Consecuence iReactToConsecuence;
     [SerializeField] protected bool reactsToExclusiveConsecuence;
     protected S_uiManager uiManagerRef;
+    [SerializeField] protected bool interestedInCrowbar;
 
     [Header("Dialogue")]
     [SerializeField] protected List<DialogTextContainer> sections = new List<DialogTextContainer>();
@@ -23,6 +24,10 @@ public class S_interactionObject : MonoBehaviour
         currentSentenceID = 0;
         consecuencesManagerRef = FindObjectOfType<S_interactionConsecuencesManager>();
         uiManagerRef = FindObjectOfType<S_uiManager>();
+        if(interestedInCrowbar)
+        {
+            S_interactionConsecuencesManager.EventCrowbarObtained += EnableDisableTrigger;
+        }
     }
     public virtual string GetCurrentSentence()
     {
@@ -150,6 +155,12 @@ public class S_interactionObject : MonoBehaviour
             isInteracting = true;
         }
         return isInteracting;
+    }
+    public void EnableDisableTrigger()
+    {
+        bool currentTriggerStatus = gameObject.GetComponent<BoxCollider2D>().enabled;
+        currentTriggerStatus = !currentTriggerStatus;
+        gameObject.GetComponent<BoxCollider2D>().enabled = currentTriggerStatus;
     }
 }
 

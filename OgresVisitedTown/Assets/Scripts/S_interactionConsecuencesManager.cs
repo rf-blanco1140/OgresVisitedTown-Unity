@@ -13,6 +13,9 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     private bool obtainedCrowbar;
     private bool wasNotifiedOfBridge;
 
+    //Events
+    public delegate void CrowbarObatined();
+    public static event CrowbarObatined EventCrowbarObtained;
 
     private void Awake()
     {
@@ -92,6 +95,10 @@ public class S_interactionConsecuencesManager : MonoBehaviour
     public void NotifyObtainedCrowbar()
     {
         obtainedCrowbar = true;
+        if(EventCrowbarObtained != null)
+        {
+            EventCrowbarObtained();
+        }
         Debug.Log("Consegui un Crowbar!!");
     }
     public bool HasTriggeredConsecuence(Consecuence pConsecuence)

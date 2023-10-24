@@ -916,6 +916,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
@@ -27287,6 +27288,7 @@ MonoBehaviour:
   iTriggerConsecuence: 3
   iReactToConsecuence: 2
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: "Hey kid, you should not test your luck like that, children tend
       to be jumpy and might shoot you through the door+I don\u2019t particularly
@@ -30128,6 +30130,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
@@ -30208,6 +30211,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[the doorknob is full of dust]'
     totalSentences: 1
@@ -83072,8 +83076,90 @@ Transform:
   - {fileID: 1258115341}
   - {fileID: 876797838}
   - {fileID: 1219083248}
+  - {fileID: 1930879473}
   m_Father: {fileID: 863663560}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &736905749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736905752}
+  - component: {fileID: 736905751}
+  - component: {fileID: 736905750}
+  m_Layer: 0
+  m_Name: TEST-CrowbarEnabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &736905750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736905749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09381c23b6e76d14787eac7df4e8f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 0}
+  iTriggerConsecuence: 7
+  iReactToConsecuence: 0
+  reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
+  sections:
+  - sectionText: Enjoy half-life
+    totalSentences: 1
+    triggersNotification: 1
+    isConsecuence: 0
+--- !u!61 &736905751
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736905749}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &736905752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736905749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.48, y: -2.53, z: -0.107426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &755028636
 GameObject:
@@ -88253,79 +88339,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
---- !u!1 &775586407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 775586409}
-  - component: {fileID: 775586410}
-  - component: {fileID: 775586408}
-  m_Layer: 0
-  m_Name: TestDeath
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &775586408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775586407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b90ef17676ff3e44aa9c648563174434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myPrecondition: 0
-  endingText: I KILL YOU!!
---- !u!4 &775586409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775586407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.07, y: -8.48, z: 4.25665}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &775586410
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775586407}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
 --- !u!1 &778418882
 GameObject:
   m_ObjectHideFlags: 0
@@ -88446,90 +88459,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &787776517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 787776520}
-  - component: {fileID: 787776519}
-  - component: {fileID: 787776518}
-  m_Layer: 0
-  m_Name: OptionsTest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &787776518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787776517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8dea1f371f16634baa204a545497390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  consecuencesManagerRef: {fileID: 1730652674}
-  iTriggerConsecuence: 0
-  iReactToConsecuence: 0
-  reactsToExclusiveConsecuence: 0
-  sections:
-  - sectionText: Pregunta 1+parte2
-    totalSentences: 2
-    triggersNotification: 0
-    isConsecuence: 0
-  - sectionText: Pregunta 2+parte 2
-    totalSentences: 2
-    triggersNotification: 0
-    isConsecuence: 0
---- !u!61 &787776519
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787776517}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &787776520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787776517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.712326, y: 1.9073751, z: -1.0388384}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &833596178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88662,6 +88591,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: (It has a cut in the middle, like if something sharp was lodged
       into it)
@@ -88825,6 +88755,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: (This road cart looks quite used)
     totalSentences: 1
@@ -95339,6 +95270,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: "(Deserters aren\u2019t easily forgiven and it would be hard to
       go back unnoticed, let\u2019s try and find another way out first)+(If nothing
@@ -95421,6 +95353,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: (These bags a filled with clothes)+(Though they are in good shape,
       they are wet and smell a bit weird)
@@ -95509,11 +95442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.57
+      value: 34.55
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6642187146327201504, guid: d3983d7e84c60544f8f5179c099af706, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95624,6 +95557,7 @@ MonoBehaviour:
   iTriggerConsecuence: 2
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: "[Sounds like children's voices are murmuring something\u2026]"
     totalSentences: 1
@@ -96322,6 +96256,7 @@ MonoBehaviour:
   iTriggerConsecuence: 1
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 1
   sections:
   - sectionText: (Some potato boxes)
     totalSentences: 1
@@ -96398,6 +96333,7 @@ MonoBehaviour:
   iTriggerConsecuence: 4
   iReactToConsecuence: 3
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[Sounds like a woman is crying]'
     totalSentences: 1
@@ -96575,6 +96511,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: (This road cart looks quite used)
     totalSentences: 1
@@ -99847,6 +99784,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
@@ -103237,6 +103175,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: '[no one answers and you can hear anything]'
     totalSentences: 1
@@ -103522,6 +103461,7 @@ MonoBehaviour:
   iTriggerConsecuence: 0
   iReactToConsecuence: 0
   reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 0
   sections:
   - sectionText: (The doorknob looks newer than the rest of the building)
     totalSentences: 1
@@ -103645,6 +103585,87 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2, y: 1.3802991}
+  m_EdgeRadius: 0
+--- !u!1 &1930879472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930879473}
+  - component: {fileID: 1930879475}
+  - component: {fileID: 1930879474}
+  m_Layer: 0
+  m_Name: Child
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930879473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930879472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.84, y: -8.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 679610499}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930879474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930879472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8dea1f371f16634baa204a545497390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consecuencesManagerRef: {fileID: 1730652674}
+  iTriggerConsecuence: 0
+  iReactToConsecuence: 0
+  reactsToExclusiveConsecuence: 0
+  interestedInCrowbar: 1
+  sections:
+  - sectionText: Patata!
+    totalSentences: 1
+    triggersNotification: 0
+    isConsecuence: 0
+--- !u!61 &1930879475
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930879472}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.887712, y: 1.731056}
   m_EdgeRadius: 0
 --- !u!1 &1974875665
 GameObject:
@@ -103886,11 +103907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.57
+      value: 34.55
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0000002
+      value: -0.019999761
       objectReference: {fileID: 0}
     - target: {fileID: 2257956659706802922, guid: ebed0a5fbc76ded44bf79e7729320c77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103939,11 +103960,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.57
+      value: 34.55
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0000002
+      value: -0.019999761
       objectReference: {fileID: 0}
     - target: {fileID: 2792169816229132024, guid: db520e091932bbf429bfd9a5741e8437, type: 3}
       propertyPath: m_LocalPosition.z
