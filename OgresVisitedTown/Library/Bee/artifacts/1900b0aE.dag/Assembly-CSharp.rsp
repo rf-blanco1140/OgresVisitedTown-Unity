@@ -406,6 +406,7 @@
 "Assets/Scripts/Script_PlayerMovement.cs"
 "Assets/Scripts/S_Checkpoint.cs"
 "Assets/Scripts/S_ChildManager.cs"
+"Assets/Scripts/S_Child_AI.cs"
 "Assets/Scripts/S_Child_GFX.cs"
 "Assets/Scripts/S_ConsequenceReactingObject.cs"
 "Assets/Scripts/S_DeathTriggers.cs"
