@@ -9,11 +9,13 @@ public class S_Child_AI : MonoBehaviour
     [SerializeField] private float speed = 200f;
     [SerializeField] private float nextWaypointDistance = 3f;
     private Path path;
+    [SerializeField] private float PathRefreshTime=0.5f;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
     private Seeker seeker;
     private Rigidbody2D rb;
     [SerializeField] private float minDistanceToPlayer = 0.5f;
+    private Animator animator;
     
 
     // Start is called before the first frame update
@@ -21,8 +23,9 @@ public class S_Child_AI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
 
-        InvokeRepeating("UpdatePath", 0f, .15f);
+        InvokeRepeating("UpdatePath", 0f, PathRefreshTime);
     }
 
     // Update is called once per frame
@@ -39,15 +42,12 @@ public class S_Child_AI : MonoBehaviour
         }
        else
         {
-            //Debug.Log("current waypoint: " + currentWaypoint);
-            //Debug.Log("Total Waypoints: " + path.vectorPath.Count);
             reachedEndOfPath = false;
         }
         
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        //Vector2 force = direction * speed * Time.deltaTime;
-        //rb.AddForce(force);
         MoveChild(direction);
+
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
         {
@@ -57,13 +57,53 @@ public class S_Child_AI : MonoBehaviour
 
     private void MoveChild(Vector2 pDirecion)
     {
+        bool isMoving = false;
         Vector2 playerPos = new Vector2(target.position.x, target.position.y);
         float distanceToPlayer = Vector2.Distance(rb.position, playerPos);
         if (!reachedEndOfPath && distanceToPlayer>minDistanceToPlayer)
         {
             rb.MovePosition(rb.position + pDirecion * speed * Time.deltaTime);
+            isMoving = true;
         }
 
+        SetGfxOrientation(isMoving, pDirecion);
+    }
+
+    private void SetGfxOrientation(bool pMoving, Vector2 pDirection)
+    {
+        //Debug Variable
+        float hor = animator.GetFloat("Horizontal");
+        float ver = animator.GetFloat("Vertical");
+
+        float xValue = pDirection.x * pDirection.x;
+        float yValue = pDirection.y * pDirection.y;
+        if (xValue > yValue)
+        {
+            xValue = 1*Mathf.Sign(pDirection.x);
+            yValue = 0;
+        }
+        else if (xValue < yValue)
+        {
+            xValue = 0;
+            yValue = 1 * Mathf.Sign(pDirection.y);
+        }
+        else
+        {
+            xValue = hor;
+            yValue = ver;
+        }
+
+        //Debug Logic
+        if(hor != xValue)
+        {
+            Debug.Log("Horizontal: "+xValue);
+            Debug.Log("Vertical: " + yValue);
+            Debug.Log("--------------------");
+        }
+
+        animator.SetFloat("Horizontal", xValue);
+        animator.SetFloat("Vertical", yValue);
+        animator.SetBool("IsMoving", pMoving);
     }
 
     private void OnPathComplete(Path pPath)

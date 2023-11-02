@@ -103922,6 +103922,7 @@ MonoBehaviour:
   target: {fileID: 226925206}
   speed: 4
   nextWaypointDistance: 1
+  PathRefreshTime: 0.5
   minDistanceToPlayer: 0.5
 --- !u!1 &1921387884
 GameObject:

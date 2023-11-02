@@ -21,7 +21,6 @@ public class S_Checkpoint : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("LOL");
             spawnManagerRef.DefineCheckpoint(transform.position);
         }
     }
