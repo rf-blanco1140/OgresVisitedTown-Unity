@@ -71,7 +71,6 @@ public class S_Child_AI : MonoBehaviour
 
     private void SetGfxOrientation(bool pMoving, Vector2 pDirection)
     {
-        //Debug Variable
         float hor = animator.GetFloat("Horizontal");
         float ver = animator.GetFloat("Vertical");
 
@@ -91,14 +90,6 @@ public class S_Child_AI : MonoBehaviour
         {
             xValue = hor;
             yValue = ver;
-        }
-
-        //Debug Logic
-        if(hor != xValue)
-        {
-            Debug.Log("Horizontal: "+xValue);
-            Debug.Log("Vertical: " + yValue);
-            Debug.Log("--------------------");
         }
 
         animator.SetFloat("Horizontal", xValue);
