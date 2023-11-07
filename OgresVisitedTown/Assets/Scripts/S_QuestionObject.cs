@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class S_QuestionObject : S_interactionObject
 {
+    [SerializeField] private S_NpcSpawner spawner;
 
     public override bool AttemptInteraction()
     {
@@ -24,7 +25,6 @@ public class S_QuestionObject : S_interactionObject
                 {
                     if (thisLoopSectionID == sections.Count-1)
                     {
-                        Debug.Log("Show options UI");
                         uiManagerRef.ShowHideChoiceUI(true);
 
                     }
@@ -35,6 +35,13 @@ public class S_QuestionObject : S_interactionObject
                     }
                 }
             }
+            else
+            {
+                Debug.Log("try closing");
+                isInteracting = false;
+                uiManagerRef.ShowHideChoiceUI(false);
+                uiManagerRef.CloseDialogUI();
+            }
         }
         else
         {
@@ -43,5 +50,15 @@ public class S_QuestionObject : S_interactionObject
         }
 
         return isInteracting;
+    }
+
+    public void ExecuteAnswer(bool pAnswer)
+    {
+        if (pAnswer)
+        {
+            spawner.SpawnNPC();
+        }
+        //uiManagerRef.ShowHideChoiceUI(false);
+        //uiManagerRef.CloseDialogUI();
     }
 }

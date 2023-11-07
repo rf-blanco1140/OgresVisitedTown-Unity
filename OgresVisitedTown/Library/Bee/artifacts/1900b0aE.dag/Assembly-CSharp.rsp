@@ -415,6 +415,8 @@
 "Assets/Scripts/S_GameEnd.cs"
 "Assets/Scripts/S_interactionConsecuencesManager.cs"
 "Assets/Scripts/S_interactionObject.cs"
+"Assets/Scripts/S_NPC.cs"
+"Assets/Scripts/S_NpcSpawner.cs"
 "Assets/Scripts/S_playerInteractionManager.cs"
 "Assets/Scripts/S_PlayerSpawnManager.cs"
 "Assets/Scripts/S_QuestionObject.cs"
